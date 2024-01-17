@@ -13,9 +13,9 @@ class Settings(BaseSettings):
   DATABASE_URL: str = os.getenv("DATABASE_URL")
   
   # Hashing 
-  SECRET_KEY: str  = os.getenv("SUPER_SECRET_KEY")
-  ALGORITHM: str  = os.getenv("ALGORITHM")
-  ACCESS_TOKEN_EXPIRE_MINUTES: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES"))
+  JWT_SECRET: str  = os.getenv("JWT_SECRET")
+  JWT_ALGORITHM: str  = os.getenv("JWT_ALGORITHM", "HS256")
+  JWT_TOKEN_EXPIRE_MINUTES: int = int(os.getenv("JWT_TOKEN_EXPIRE_MINUTES", '30'))
 
 
 def get_settings() -> Settings:
