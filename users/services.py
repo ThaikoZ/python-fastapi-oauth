@@ -15,8 +15,8 @@ async def create_user_account(db: Session, data: CreateUserRequest):
         last_name=data.last_name,
         email=data.email,
         hashed_password=get_password_hash(data.password), 
-        is_active=False,
-        is_verified=False,
+        is_active=True, # FIXME: Change to False 
+        is_verified=True, # FIXME: Change to False
         registered_at=datetime.now(),
         updated_at=datetime.now()
     )

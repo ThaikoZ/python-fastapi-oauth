@@ -12,7 +12,7 @@ class Settings(BaseSettings):
   # Database
   DATABASE_URL: str = os.getenv("DATABASE_URL")
   
-  # Hashing 
+  # Jwt Tokens 
   JWT_SECRET: str  = os.getenv("JWT_SECRET")
   JWT_ALGORITHM: str  = os.getenv("JWT_ALGORITHM", "HS256")
   ACCESS_TOKEN_EXPIRE_MINUTES: int = int(os.getenv("JWT_TOKEN_EXPIRE_MINUTES", '30'))
