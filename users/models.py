@@ -7,10 +7,10 @@ class UserModel(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
-    first_name = Column(String(100))
-    last_name = Column(String(100))
-    email = Column(String, unique=True, index=True)
-    hashed_password = Column(String(100))
+    first_name = Column(String(45))
+    last_name = Column(String(45))
+    email = Column(String(255), unique=True, index=True)
+    hashed_password = Column(String(45))
     is_active = Column(Boolean, default=False)
     is_verified = Column(Boolean, default=False)
     verified_at = Column(DateTime, nullable=True, default=None)

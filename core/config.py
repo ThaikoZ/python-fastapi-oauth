@@ -4,7 +4,7 @@ from pathlib import Path
 from pydantic_settings import BaseSettings
 
 env_path = Path('.') / ".env"
-print(env_path)
+
 load_dotenv()
 
 class Settings(BaseSettings):
